@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(private usersService: UsersService, private router: Router) { }
 
    ngOnInit() {
+     sessionStorage.clear();
      $('.alert').hide('');
   }
   async usersLogin(){
