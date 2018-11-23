@@ -3,26 +3,28 @@
     <div class="card-body">
       <h3 class="card-title">login...</h3>
       <div class="card-text">
-
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <i class="fas fa-user"></i>
+        <form>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fas fa-user"></i>
+              </div>
             </div>
+            <input type="text" id="users_name" name="users_name" placeholder="Username" class="form-control"
+              [(ngModel)]="username">
           </div>
-          <input type="text" id="users_name" name="users_name" placeholder="Username" class="form-control" [(ngModel)]="username">
-        </div>
 
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <i class="fas fa-key"></i>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fas fa-key"></i>
+              </div>
             </div>
+            <input type="text" id="password" name="password" placeholder="password" class="form-control" [(ngModel)]="password">
           </div>
-          <input type="text" id="password" name="password" placeholder="password" class="form-control" [(ngModel)]="password">
-        </div>
 
-        <input type="submit" id="login_bt" name="login_bt" value="Login" class="btn btn-primary btn-block" (click)="usersLogin()">
+          <input type="submit" id="login_bt" name="login_bt" value="Login" class="btn btn-primary btn-block" (click)="usersLogin()">
+        </form>
       </div>
     </div>
   </div>

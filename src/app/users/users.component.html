@@ -1,4 +1,4 @@
-<button type="button" class="btn-success m-3" data-toggle="modal" data-target="#adduserModal"><i class="fas fa-plus-circle fa-lg"></i>
+<button type="button" class="btn btn-success m-3" data-toggle="modal" data-target="#adduserModal"><i class="fas fa-plus-circle fa-lg"></i>
   Add</button>
 <table class="table table-hover ">
   <thead>
@@ -27,7 +27,77 @@
 
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      ...
+      <div class="modal-header">
+        <h5 class="modal-title">Insert New User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <input type="text" id="users_name" name="users_name" placeholder="Username" class="form-control" [(ngModel)]="newuser.user_name">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fas fa-key"></i>
+          </div>
+        </div>
+        <input type="text" id="password" name="password" placeholder="Password" class="form-control" [(ngModel)]="newuser.user_password">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <input type="text" id="users_fullname" name="users_fullname" placeholder="Fullname" class="form-control" 
+        [(ngModel)]="newuser.users_fullname">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fas fa-key"></i>
+          </div>
+        </div>
+        <input type="text" id="users_phone" name="users_phone" placeholder="Phone" class="form-control" [(ngModel)]="newuser.user_phone">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <input type="text" id="users_email" name="users_email" placeholder="Email" class="form-control" [(ngModel)]="newuser.user_email">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fas fa-key"></i>
+          </div>
+        </div>
+        <select class="form-control" [(ngModel)]="status">
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          </select>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        <button type="button" class="btn btn-success" (click)="addUser()">Save</button>
+      
+      </div>
     </div>
   </div>
 </div>

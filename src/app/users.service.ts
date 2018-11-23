@@ -21,12 +21,16 @@ return result.data;
 
 }
 async getAllUsers(){
-  let result= await axios.post(this.apiurl,{
-  Apikey: 'NetLogApi',
-  fn: 'selectAll'
-  
-  });
-  return result.data;
-  
-  }
+let result= await axios.post(this.apiurl,{
+Apikey: 'NetLogApi',
+fn: 'selectAll'
+
+});
+return result.data;
+
+}
+async insertUser(newuser){
+let result= await axios.post(this.apiurl,newuser);
+return result.data;
+}
 }
